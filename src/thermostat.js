@@ -7,7 +7,9 @@ var Thermostat = function(){
 
 Thermostat.prototype.raiseTemp = function(number) {
    if (!this.savingmode) {
-    this.maxtemp = 32
+     this.maxtemp = 32
+  } else {
+    this.maxtemp = 25
   }
   if (this.temperature + number > this.maxtemp) {
     return this.temperature = this.maxtemp
@@ -21,5 +23,20 @@ Thermostat.prototype.decreaseTemp = function(number) {
     return this.temperature = this.minTemp
   } else {
   return (this.temperature -= number)
+  };
+};
+
+Thermostat.prototype.savingmodeOff = function() {
+  this.savingmode = false
+};
+
+Thermostat.prototype.reset = function() {
+  return this.temperature = 20
+};
+
+Thermostat.prototype.usage = function(number) {
+  if (number < 18) { return "low-usage"
+  } else if (number < 25) { return "medium-usage"
+  } else { return 'high-usage'
   };
 };

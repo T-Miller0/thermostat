@@ -32,7 +32,31 @@ describe('Thermostat', function() {
   describe('power mode', function() {
     it('max temperature is 25  when power mode on', function() {
       thermostat.raiseTemp(6)
-      expect(thermostat.temperature).toEqual(25)
-    })
-  })
+      expect(thermostat.temperature).toEqual(25);
+    });
+    it('max temperature is 32 when power saving mode is off', function() {
+      thermostat.savingmodeOff()
+      thermostat.raiseTemp(15)
+      expect(thermostat.temperature).toEqual(32);
+    });
+  });
+  describe('#reset', function() {
+    it('resets temperature to 20', function() {
+      thermostat.raiseTemp(3)
+      thermostat.reset()
+      expect(thermostat.temperature).toEqual(20);
+    });
+  });
+
+  describe('#usage', function() {
+    it('return low-usage if current energy < 18', function() {
+      expect(thermostat.usage(16)).toEqual('low-usage')
+    });
+    it('return #medium-usage if energy < 25', function() {
+      expect(thermostat.usage(22)).toEqual('medium-usage')
+    });
+    it('return #high-usage if energy >=25', function() {
+      expect(thermostat.usage(26)).toEqual('high-usage')
+    });
+  });
 });
