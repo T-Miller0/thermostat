@@ -17,5 +17,15 @@ describe('Thermostat', function() {
       thermostat.raiseTemp(2)
       expect(thermostat.temperature).toBe(22);
     })
-  })
+    it('decreases the temperature', function() {
+      thermostat.decreaseTemp(2)
+      expect(thermostat.temperature).toBe(18);
+    });
+  });
+  describe('minimum temperature', function() {
+    it('minimum temperature of 10 degrees', function() {
+      thermostat.decreaseTemp(11)
+      expect(thermostat.temperature).toBe(10);
+    });
+  });
 });
