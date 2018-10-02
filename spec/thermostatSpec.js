@@ -28,4 +28,11 @@ describe('Thermostat', function() {
       expect(thermostat.temperature).toBe(10);
     });
   });
+
+  describe('power mode', function() {
+    it('max temperature is 25  when power mode on', function() {
+      thermostat.raiseTemp(6)
+      expect(thermostat.temperature).toEqual(25)
+    })
+  })
 });
