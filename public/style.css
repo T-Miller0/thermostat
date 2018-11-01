@@ -1,0 +1,74 @@
+.low-usage {
+ color: green;
+}
+
+.medium-usage {
+ color: black;
+}
+
+.high-usage {
+ color: red;
+}
+
+body {
+ background-image: url("https://cdn.vox-cdn.com/thumbor/zcUmeNCgNUqvRi5CwFxiYD-UGw0=/0x0:1024x576/1200x800/filters:focal(431x207:593x369)/cdn.vox-cdn.com/uploads/chorus_image/image/58263565/Switch_SMO_ND0913_SCRN17.0.jpg");
+ background-size: 100%;
+ background-color: #cccccc;
+ vertical-align: text-top;
+}
+
+h1 {
+ text-align: center;
+ font-size: 80px;
+ font-family: ‘Amatic SC’, cursive;
+}
+
+#select-city {
+ text-align: center;
+}
+
+#current-city {
+ font-size: 50px;
+ font-family: ‘Amatic SC’, cursive;
+}
+
+p {
+ text-align: center;
+ font-size: 50px;
+ font-family: ‘Amatic SC’, cursive;
+}
+
+#temperature-up {
+ font-family: ‘Amatic SC’, cursive;
+ font-size: 50px;
+ width: 20%;
+ background-color: red;
+}
+
+#temperature-down {
+ font-family: ‘Amatic SC’, cursive;
+ font-size: 50px;
+ width: 20%;
+ background-color: blue;
+}
+
+#temperature-reset {
+ font-family: ‘Amatic SC’, cursive;
+ font-size: 50px;
+ width: 10%;
+ background-color: purple;
+}
+
+#power-saving-on {
+ font-family: ‘Amatic SC’, cursive;
+ font-size: 50px;
+ width: 5%;
+ background-color: green;
+}
+
+#power-saving-off {
+ font-family: ‘Amatic SC’, cursive;
+ font-size: 50px;
+ width: 5%;
+ background-color: red;
+}
